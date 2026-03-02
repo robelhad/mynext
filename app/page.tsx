@@ -48,7 +48,7 @@ export default function Home() {
         </p>
 
         <Link
-          href="/products"
+          href="https://www.google.com/"
           style={{
             display: "inline-block",
             padding: "18px 48px",

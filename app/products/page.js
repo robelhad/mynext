@@ -37,8 +37,8 @@ export default async function ProductsPage() {
     //res.json(products);
     }
     const safeProducts = JSON.parse(JSON.stringify(products));
-    return (<div>Success loading products</div>
-    //<ProductsClient products={safeProducts?? []} />
+    return (
+    <ProductsClient products={safeProducts?? []} />
       //renderPage("Products - Susu's Macaroon Market", html)
   );
         } catch (error) {
