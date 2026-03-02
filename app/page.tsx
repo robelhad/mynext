@@ -19,7 +19,7 @@ export default function Home() {
         padding: "0 20px",
       }}
     >
-      <div>{process.env.NEXT_PUBLIC_API_URL}</div>
+      <div>{process.env.REACT_APP_API_URL}</div>
       <div style={{ maxWidth: "900px" }}>
         <h1
           style={{
