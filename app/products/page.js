@@ -11,11 +11,23 @@ const redis = new Redis({
 });
 
 export default async function ProductsPage() {
+  let products = null;
+  try {
+    const cached = await redis.get("products");
 
+    if (cached) {
+      console.log("Serving from Redis cache");
+      //return res.json(cached);
+      products = cached;
+    }
  
     return (
-  <div>Error loading products</div>
+  <div>Success loading products</div>
     )
+ } catch (error) {
+      console.error("Error fetching products:", error);
+      return <div>Error loading products</div>;
+    }
 
   
 }
